@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -14,7 +17,7 @@
             name: 'Ryu',
             age: 30
         }
-    }
+    
     handleClick(e){
         console.log(this.state);
     }
@@ -26,7 +29,7 @@
     }
     render() {
         return (
-            <div> className="app-content"
+            <div className="app-content">
                 <h1>Hey, ninjas</h1>
                 <p>My name is: { this.state.name } and I am { this.state.age }</p>
                 <button onClick={this.handleClick}>Click Me</button>
@@ -35,6 +38,8 @@
             </div>
         )
     }
+}
+    ReactDOM.render(< App/>, document.getElementById('app'))
 </script>
 </body>
 </html>
